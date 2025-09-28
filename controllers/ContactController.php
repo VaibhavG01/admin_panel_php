@@ -64,5 +64,10 @@ class ContactController {
             exit;
         }
     }
+
+    // ✅ Get total count of contacts
+    public function getCount() {
+        return $this->contact->getCount();
+    }
 }
 ?>

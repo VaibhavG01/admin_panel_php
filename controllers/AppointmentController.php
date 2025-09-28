@@ -86,5 +86,14 @@ class AppointmentController {
             exit;
         }
     }
+
+    // ✅ Get total count of appointments
+    public function getCount() {
+        return $this->appointment->getCount();
+    }
+
+   
+
+
 }
 ?>
