@@ -59,7 +59,7 @@
                 class="px-6 py-2 bg-fuchsia-600 text-black shadow-soft-lg rounded-lg hover:bg-fuchsia-700 transition">
                 Save Profile
             </button>
-            <a href="index.php?route=profiles" 
+            <a href="index.php?route=profile" 
                 class="ml-4 px-6 py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400 transition">Cancel</a>
         </div>
     </form>

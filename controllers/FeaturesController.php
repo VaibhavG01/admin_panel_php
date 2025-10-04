@@ -76,4 +76,9 @@ class FeaturesController {
         $this->feature->delete();
         header("Location: index.php?route=features");
     }
+
+    // ✅ Get total count of features
+    public function getCount() {
+        return $this->feature->getCount();
+    }
 }

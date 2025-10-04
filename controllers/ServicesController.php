@@ -76,4 +76,9 @@ class ServicesController {
         $this->service->delete();
         header("Location: index.php?route=services");
     }
+
+    // Get total count of services
+    public function getCount() {
+        return $this->service->getCount();
+    }
 }

@@ -52,4 +52,9 @@ class SeosController {
         $this->seo->delete();
         header("Location: index.php?route=seos");
     }
+
+    // ✅ Get total count of seos
+    public function getCount() {
+        return $this->seo->getCount();
+    }
 }

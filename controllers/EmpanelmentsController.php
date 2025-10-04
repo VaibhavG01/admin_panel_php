@@ -76,5 +76,10 @@ class EmpanelmentController {
         $this->empanelment->delete();
         header("Location: index.php?route=empanelments");
     }
+
+    // ✅ Get total count of empanelments
+    public function getCount() {
+        return $this->empanelment->getCount();
+    }
 }
 ?>

@@ -54,5 +54,10 @@ class SocialMediaController {
         $this->social->delete();
         header("Location: index.php?route=social_media");
     }
+
+    // ✅ Get total count of social media
+    public function getCount() {
+        return $this->social->getCount();
+    }
 }
 ?>

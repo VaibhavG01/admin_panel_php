@@ -74,4 +74,9 @@ class VideosController {
         $this->videos->delete();
         header("Location: index.php?route=videos");
     }
+
+    // ✅ Get total count of videos
+    public function getCount() {
+        return $this->videos->getCount();
+    }
 }

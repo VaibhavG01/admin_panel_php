@@ -76,4 +76,9 @@ class DepartmentsController {
         $this->department->delete();
         header("Location: index.php?route=departments");
     }
+
+    // ✅ Get total count of departments
+    public function getCount() {
+        return $this->department->getCount();
+    }
 }

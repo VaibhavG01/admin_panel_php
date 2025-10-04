@@ -59,5 +59,10 @@ class ReviewController {
         header("Location: index.php?route=reviews");
         exit;
     }
+
+    // ✅ Get total count of reviews
+    public function getCount() {
+        return $this->review->getCount();
+    }
 }
 ?>

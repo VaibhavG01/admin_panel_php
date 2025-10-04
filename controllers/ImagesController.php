@@ -74,4 +74,9 @@ class ImagesController {
         $this->images->delete();
         header("Location: index.php?route=images");
     }
+
+    // ✅ Get total count of images
+    public function getCount() {
+        return $this->images->getCount();
+    }
 }

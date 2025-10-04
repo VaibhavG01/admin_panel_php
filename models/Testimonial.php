@@ -71,5 +71,13 @@ class Testimonial {
         $stmt->bindParam(":id", $this->id);
         return $stmt->execute();
     }
+
+    public function getCount() {
+        $query = "SELECT COUNT(*) as total FROM {$this->table}";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $row['total'] ?? 0;
+    }
 }
 ?>

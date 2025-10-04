@@ -81,4 +81,9 @@ class BlogsController {
         $this->blog->delete();
         header("Location: index.php?route=blogs");
     }
+
+    // Get total count of blogs
+    public function getCount() {
+        return $this->blog->getCount();
+    }
 }

@@ -89,5 +89,10 @@ class UsersController {
         $this->user->delete();
         header("Location: index.php?route=users");
     }
+
+    // ✅ Get total count of users
+    public function getCount() {
+        return $this->user->getCount();
+    }
 }
 ?>

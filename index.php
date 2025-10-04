@@ -1,7 +1,7 @@
 <?php
 require_once "db/config.php";
 require_once "controllers/AuthController.php";
-require_once "controllers/BannerController.php";
+require_once "controllers/bannerController.php";
 require_once "controllers/ServicesController.php";
 require_once "controllers/FeaturesController.php";
 require_once "controllers/DepartmentsController.php";
@@ -23,7 +23,7 @@ $authController = new AuthController();
 $database = new Database();
 $db = $database->getConnection();
 
-$bannercontroller = new BannerController($db);
+$bannerController = new bannerController($db);
 $servicesController = new ServicesController($db);
 $featuresController = new FeaturesController($db);
 $departmentsController = new DepartmentsController($db);
@@ -58,9 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Banner POST Routes
     elseif($route === 'banner_store'){
-        $bannercontroller->store($_POST, $_FILES);
+        $bannerController->store($_POST, $_FILES);
     } elseif($route === 'banner_update'){
-        $bannercontroller->update($_GET['id'], $_POST, $_FILES);
+        $bannerController->update($_GET['id'], $_POST, $_FILES);
     }
 
     // Servcies POST Routes
@@ -182,16 +182,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Banners Routes GET 
     elseif ($route === 'banners') {
-        $bannercontroller->index();
+        $bannerController->index();
     }
     elseif ($route === 'banner_create') {
-        $bannercontroller->create();
+        $bannerController->create();
     }  
     elseif($route === 'banner_edit'){
-        $bannercontroller->edit($_GET['id']);
+        $bannerController->edit($_GET['id']);
     } 
     elseif($route === 'banner_delete'){
-        $bannercontroller->delete($_GET['id']);
+        $bannerController->delete($_GET['id']);
     }
 
     // Services Routes GET 

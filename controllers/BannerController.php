@@ -74,4 +74,10 @@ class BannerController {
         $this->banner->delete();
         header("Location: index.php?route=banners");
     }
+
+
+    // ✅ Get total count of banners
+    public function getCount() {
+        return $this->banner->getCount();
+    }
 }

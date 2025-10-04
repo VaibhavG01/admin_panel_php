@@ -90,5 +90,10 @@ class TestimonialController {
         header("Location: index.php?route=testimonials");
         exit;
     }
+
+    // ✅ Get total count of testimonial
+    public function getCount() {
+        return $this->testimonial->getCount();
+    }
 }
 ?>
