@@ -24,6 +24,7 @@ class VideosController {
     // Store videos
     public function store($data, $file) {
         $this->videos->title = $data['title'];
+        $this->videos->url = $data['url'];
         $this->videos->isActive = isset($data['isActive']) ? 1 : 0;
 
         // Handle image upload
@@ -52,6 +53,7 @@ class VideosController {
 
         $this->videos->id = $id;
         $this->videos->title = $data['title'];
+        $this->videos->url = $data['url'];
         $this->videos->isActive = isset($data['isActive']) ? 1 : 0;
 
         if (!empty($file['videos']['name'])) {

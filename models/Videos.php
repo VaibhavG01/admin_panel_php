@@ -30,12 +30,13 @@ class Videos {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Create image
+    // Create Videos
     public function create() {
-        $query = "INSERT INTO {$this->table} (title, videos, isActive) 
-                  VALUES (:title, :videos, :isActive)";
+        $query = "INSERT INTO {$this->table} (title, url, videos, isActive) 
+                  VALUES (:title, :url, :videos, :isActive)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":title", $this->title);
+        $stmt->bindParam(":url", $this->url);
         $stmt->bindParam(":videos", $this->videos);
         $stmt->bindParam(":isActive", $this->isActive, PDO::PARAM_INT);
         return $stmt->execute();
@@ -44,10 +45,11 @@ class Videos {
     // Update image
     public function update() {
         $query = "UPDATE {$this->table} 
-                  SET title = :title, videos = :videos, isActive = :isActive 
+                  SET title = :title, url = :url, videos = :videos, isActive = :isActive 
                   WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":title", $this->title);
+        $stmt->bindParam(":url", $this->url);
         $stmt->bindParam(":videos", $this->videos);
         $stmt->bindParam(":isActive", $this->isActive, PDO::PARAM_INT);
         $stmt->bindParam(":id", $this->id, PDO::PARAM_INT);

@@ -17,7 +17,8 @@
                 <tr>
                 <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">ID</th>
                 <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Title</th>
-                <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Image</th>
+                <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Video URL</th>
+                <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Videos</th>
                 <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Status</th>
                 <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Actions</th>
                 </tr>
@@ -27,9 +28,15 @@
                 <tr class="hover:bg-gray-50 transition-colors">
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700"><?php echo htmlspecialchars($row['id']); ?></td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700"><?php echo htmlspecialchars($row['title']); ?></td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-700">
+                        <a href="<?php echo htmlspecialchars($row['url']); ?>" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-800 font-semibold">
+                            <?php echo htmlspecialchars(substr($row['url'], 0, 20)); ?>
+                        </a>
+                    </td>
+
                     <td class="px-6 py-4 whitespace-nowrap">
-                    <img src="./assets/img/uploads/videos/<?php echo htmlspecialchars($row['videos']); ?>" 
-                        class="h-16 w-24 object-cover rounded-md" alt="videos Image">
+                    <video src="./assets/img/uploads/videos/<?php echo htmlspecialchars($row['videos']); ?>" 
+                        class="h-16 w-24 object-cover rounded-md" controls></video>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm">
                     <span class="px-2 py-1 text-xs font-semibold rounded-full <?php echo $row['isActive'] ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'; ?>">

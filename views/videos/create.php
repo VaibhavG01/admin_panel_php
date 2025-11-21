@@ -7,7 +7,12 @@
     <form method="POST" action="index.php?route=videos_store" enctype="multipart/form-data" class="space-y-6">
       <div>
         <label for="title" class="block text-sm font-semibold text-slate-700 mb-2">Video Title</label>
-        <input type="text" name="title" id="title" placeholder="Enter video title" required
+        <input type="text" name="title" id="title" placeholder="Enter video title" 
+              class="w-full px-4 py-2 text-sm text-slate-700 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-all">
+      </div>
+      <div>
+        <label for="url" class="block text-sm font-semibold text-slate-700 mb-2">Video URL</label>
+        <input type="text" name="url" id="url" placeholder="Enter video URL" 
               class="w-full px-4 py-2 text-sm text-slate-700 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-all">
       </div>
       <div>
