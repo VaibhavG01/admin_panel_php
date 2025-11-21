@@ -13,7 +13,7 @@
     </div>
 
     <div class="overflow-x-auto bg-white shadow-md rounded-xl">
-        <table class="w-full divide-y divide-gray-200 table-auto">
+        <table class="w-full divide-y divide-gray-200 table-auto table">
             <thead class="bg-gray-50">
                 <tr>
                     <th class="px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">ID</th>

@@ -11,10 +11,10 @@ require_once "controllers/VideosController.php";
 require_once "controllers/ProfileController.php";
 require_once "controllers/EmpanelmentsController.php";
 require_once "controllers/SeosController.php";
-require_once 'controllers/SocialMediaController.php';
-require_once 'controllers/TestimonialController.php';
-require_once 'controllers/ReviewController.php';
-require_once 'controllers/UsersController.php';
+require_once "controllers/SocialMediaController.php";
+require_once "controllers/TestimonialController.php";
+require_once "controllers/ReviewController.php";
+require_once "controllers/UsersController.php";
 require_once "controllers/AppointmentController.php";
 require_once "controllers/ContactController.php";
 

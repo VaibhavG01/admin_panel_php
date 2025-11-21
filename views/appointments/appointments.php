@@ -33,8 +33,8 @@
                     <td class="px-4 py-3 text-sm text-slate-700"><?php echo htmlspecialchars($row['fullname']); ?></td>
                     <td class="px-4 py-3 text-sm text-slate-700"><?php echo htmlspecialchars($row['email']); ?></td>
                     <td class="px-4 py-3 text-sm text-slate-700"><?php echo htmlspecialchars($row['mobile_no']); ?></td>
-                    <td class="px-4 py-3 text-sm text-slate-700 break-words max-w-xs"><?php echo htmlspecialchars($row['address']); ?></td>
-                    <td class="px-4 py-3 text-sm text-slate-700 break-words max-w-xs"><?php echo htmlspecialchars($row['message']); ?></td>
+                    <td class="px-4 py-3 text-sm text-slate-700 break-words max-w-xs"><?php echo htmlspecialchars(substr($row['address'], 0, 20)); ?></td>
+                    <td class="px-4 py-3 text-sm text-slate-700 break-words max-w-xs"><?php echo htmlspecialchars(substr($row['message'], 0, 20)); ?></td>
                     <td class="px-4 py-3 text-sm text-slate-700"><?php echo htmlspecialchars($row['date']); ?></td>
 
                     <!-- ✅ Status Badge -->
